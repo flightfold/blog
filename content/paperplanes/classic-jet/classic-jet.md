@@ -1,7 +1,7 @@
 ---
 title: 'Classic Jet'
 date: 2023-10-29T12:00:00-00:00
-draft: false
+draft: true
 banner: "../paperplanes/classic-jet/thumbnailc.webp"
 math: false
 summary: "Classic Jet"

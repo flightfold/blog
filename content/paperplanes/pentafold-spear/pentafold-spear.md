@@ -1,7 +1,7 @@
 ---
 title: "Pentafold Spear"
 date: 2023-10-31T14:20:56+05:30
-draft: false
+draft: true
 banner: "../paperplanes/pentafold-spear/thumbnailc.webp"
 math: false
 summary: "Pentafold Spear"

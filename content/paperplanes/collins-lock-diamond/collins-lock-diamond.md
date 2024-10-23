@@ -1,7 +1,7 @@
 ---
 title: "Collins-Lock Diamond"
 date: 2023-11-02T20:39:15+05:30
-draft: false
+draft: true
 banner: "../paperplanes/collins-lock-diamond/thumbnailc.webp"
 math: false
 summary: "Collins-Lock Diamond"

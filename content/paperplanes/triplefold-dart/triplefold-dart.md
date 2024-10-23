@@ -1,7 +1,7 @@
 ---
 title: "Triplefold Dart"
 date: 2023-10-30T23:10:40+05:30
-draft: false
+draft: true
 banner: "../paperplanes/triplefold-dart/thumbnailc.webp"
 math: false
 summary: "Triplefold Dart"

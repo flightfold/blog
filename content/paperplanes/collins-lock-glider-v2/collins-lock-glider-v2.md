@@ -1,7 +1,7 @@
 ---
 title: "Collins-Lock Glider V2"
 date: 2023-11-01T17:04:44+05:30
-draft: false
+draft: true
 banner: "../paperplanes/collins-lock-glider-v2/thumbnailc.webp"
 math: false
 summary: "Collins-Lock Glider V2"

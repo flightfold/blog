@@ -1,7 +1,7 @@
 ---
 title: "Toda Lock LF"
 date: 2024-01-15T08:35:37+05:30
-draft: false
+draft: true
 banner: "../paperplanes/toda-lock-lf/thumbnailc.webp"
 math: false
 summary: "Toda Lock LF"

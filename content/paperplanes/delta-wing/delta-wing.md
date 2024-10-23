@@ -1,7 +1,7 @@
 ---
 title: "Delta Wing"
 date: 2023-11-03T21:49:57+05:30
-draft: false
+draft: true
 banner: "../paperplanes/delta-wing/thumbnailc.webp"
 math: false
 summary: "Delta Wing"
