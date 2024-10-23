@@ -1,0 +1,92 @@
+<!-- Start the first line with name of the algorithm -->
+<!-- Inputs start with 'Inputs:' -->
+<!-- Outputs start with 'Outputs:'-->
+<!-- Algorithm starts with 'Algorithm:' -->
+<!-- For/While loops end with EndFor and EndWhile-->
+<!-- If statements end with EndIf-->
+{{ $algo_id := .Get "id" }}
+<div class="row">
+    <div class="col-md-12 col-sm-12" id="{{ $algo_id }}">
+    </div>
+</div>
+<script>
+    //get the string
+    var text = "{{ .Inner }}";
+    //split the lines
+    var lines = text.split(/\r?\n/);
+
+    var final_text ="";
+    var states = ['Start', 'Input', 'Output', 'Algorithm','End'];
+    var state = 0;
+    var add_spaces = function(count) {
+        var text = '';
+        for(var i=0;i<count*2;i++) {
+            text += '&ensp;';
+        }
+        return text;
+    }
+
+    var process_line = function(line) {
+        var newline = '';
+        if (line.match(/<-/g)) {
+            var parts = line.split(/<-/g);
+            newline += parts[0] + '&larr;' + '<mark>'+ parts[1] + '</mark>' ;
+        } else {
+            newline = line;
+        }
+        return newline;
+    }
+
+    spaces = 1;
+    for (var i=0; i < lines.length; i++) {
+
+        if(lines[i].trim().length == 0) {
+            continue;
+        }
+
+        //first valid line will be the name of the algorithm
+        if(states[state] == 'Start') {
+            final_text += "<hr> <h4>" + lines[i].trim() + "</h4>  <hr>";
+            state++;
+            spaces++;
+
+        } else if(lines[i].match(/Input/g) || lines[i].match(/Output/g) || (lines[i].match(/Algorithm/g))) {
+            if(lines[i].match(/Input/g)) {
+                state = 1;
+            } else if(lines[i].match(/Output/g)) {
+                state = 2;
+            } else if(lines[i].match(/Algorithm/g)) {
+                state = 3;
+            }
+            spaces--;
+            final_text += '<hr> <h5>' + add_spaces(spaces) + lines[i].trim() + '</h5> <hr>';
+
+            spaces++;
+        
+        } else if(states[state] == 'Input' || states[state] == 'Output' || states[state] == 'Algorithm') {
+
+            if(lines[i].trim().startsWith('EndFor') || lines[i].trim().startsWith('EndWhile') || lines[i].trim().startsWith('EndIf')) {
+                spaces-=2;
+                //add extra line after the endfor or endwhile
+                final_text += add_spaces(spaces) + process_line(lines[i].trim()) + '<br> <br>';
+            }
+
+
+            else if(lines[i].trim().startsWith('For') || lines[i].trim().startsWith('While') || lines[i].trim().startsWith('If')) {
+                //add extra line before for
+                final_text += '<br>' + add_spaces(spaces) + process_line(lines[i].trim()) + '<br>';
+                spaces+=2;
+
+            } else {
+                final_text += add_spaces(spaces) + process_line(lines[i].trim()) + '<br>';
+
+            }
+        }
+    }
+    final_text += '<hr>'
+    //process this text and show it as an algorithm
+    var content = document.getElementById("{{ $algo_id }}");
+    content.innerHTML = final_text;
+    
+
+</script>

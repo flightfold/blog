@@ -1,0 +1,25 @@
+baseURL = "https://flightfold.com"
+DefaultContentLanguage = "en"
+languageCode = "en-us"
+title = "FlightFold"
+#googleAnalytics = "G-74QS6QP8PQ"
+
+[params]
+logo = "banner/flightfold-logo-long.webp"
+copyright = " www.flightfold.com"
+#tagline = "From simple folds to soaring adventures"
+bannerPath = "/banner/"
+readingTime = true
+wordCount = false
+staticMan = true
+enableRobotsTXT = true
+Paginate = 6
+
+
+comments = true
+socialShare = true
+PostsAsRows = false
+hideAuthor = true
+showRelatedPosts = true
+[Author]
+name = "Srini Vijay"

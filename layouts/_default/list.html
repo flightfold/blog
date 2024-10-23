@@ -1,0 +1,25 @@
+{{ define "main" }}
+<!-- {{ printf "%#v" .Title }} -->
+<div class="row">
+    <div class="container">
+        <div class="row font-sans"> 
+        <!-- Display the blog pages as cards-->
+        {{ range (.Paginator 6).Pages }}
+        {{ partial "post_preview" . }}
+        {{ end }}
+
+
+        <!-- Setup the paganation links --> 
+        <div class="row font-sans"> 
+        <div class="col-md-12 mt-10">
+            <nav aria-label="Page navigation"> 
+            <ul class= "pagination justify-content-end">    
+                {{ template "_internal/pagination.html" . }} 
+            </ul>
+            </nav> 
+        </div> 
+        </div>
+    </div>
+</div>
+
+{{ end }}

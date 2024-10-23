@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <link rel="shortcut icon" type="image/png" href="/images/icon-192x192.png">
+        <link rel="shortcut icon" sizes="192x192" href="/images/icon-192x192.png">
+        <link rel="apple-touch-icon" href="/images/icon-192x192.png">
+        ...
+        {{ block "title" . }}
+        {{ end }}
+
+    </head>
+
+    <body> 
+
+        {{ template "_internal/google_analytics_async.html" . }}
+        {{ partial "header" . }}
+
+        <div class="container" id="frame">
+
+            {{ block "main" . }}
+                <div class="row" id="page-content">
+                </div>
+
+            {{ end }}
+
+
+        </div>  <!-- End of container -->
+        {{ partial "footer" . }}    
+
+        {{ partial "bootstrap_includes" }}
+
+        {{- if .Site.Params.useHLJS -}}
+            <link rel="stylesheet" href="{{ "css/highlight.min.css" | absURL }}" />
+        {{- else -}}
+            <link rel="stylesheet" href="{{ "css/syntax.css" | absURL }}" />
+        {{- end -}}
+
+        <link disabled id="dark-mode-theme" rel="stylesheet" href="{{ "css/dark.css" | absURL }}" />
+
+        <link rel="stylesheet" type="text/css" href="{{ "css/main.css" | absURL }}" />
+        <link rel="stylesheet" type="text/css" href="{{ "css/codeblock.css" | absURL }}" />
+        
+        
+        
+        <script src="/js/custom.js"></script>
+        
+    
+
+    </body>
+
+
+</html> 

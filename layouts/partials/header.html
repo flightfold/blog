@@ -1,0 +1,62 @@
+<div class="header" id="page_menu" >
+  <div class="container">
+
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/"> <img src="/{{ .Site.Params.logo }}" style="width:200px;" /></a>
+      <span class="navbar-text d-none d-md-block">
+        {{ .Site.Params.tagline }}
+      </span>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+
+          <!-- <li class="nav-item">
+            <a class="navbar-text" title="Paper Planes" href="/paperplanes/">Paper Planes &nbsp;&nbsp;</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="navbar-text" title="Foam Models" href="/Foammodels/">Foam Models &nbsp;&nbsp;</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="navbar-text" role="button" title="Powered Flight" href="/poweredflight/">Powered Flight &nbsp;&nbsp;</a>
+          </li> -->
+
+          </li>
+          <!-- <li class="nav-item">
+            <a class="navbar-text" title="Courses" href="/courses/">Courses &nbsp;&nbsp;</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="navbar-text " title="About" href="/pages/about">About &nbsp;&nbsp;</a>
+          </li>
+          <!-- <li class="nav-item ms-auto">
+            <a class="bi bi-moon-stars" id="dark-mode-toggle"> &nbsp;&nbsp;</a>
+          </li> -->
+
+        </ul>
+      </div>
+      <!-- look for symbols here https://www.piliapp.com/symbol/menu/ -->
+      <button class="navbar-toggler collapsed hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false">≡</button>
+
+    </nav>    
+  </div>
+</div> 
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-74QS6QP8PQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-74QS6QP8PQ');
+</script>
+
+<!-- Hugo Version number -->
+{{ hugo.Generator -}}
+

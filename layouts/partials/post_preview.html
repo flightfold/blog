@@ -1,0 +1,56 @@
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <div class="card h-100 single-post-card shadow-effect bg-faded-light">
+
+        <a href="{{ .Permalink }}">
+            <div class="card-body">
+
+                <!-- Display the title-->
+                <h3 class="fw-bold post-title">{{ .Title }}</h3>    
+                
+                {{ if .Params.subtitle }}
+                <h3 class="post-subtitle">
+                    {{ .Params.subtitle }}
+                </h3>
+                {{ end }}
+
+                <p class="post-meta">
+                    {{ partial "post_meta.html" . }}
+                </p>
+                {{ print }}
+
+                <!-- Do not display the summary for the minimal look -->
+                {{ if not (and .Params.look (eq .Params.look "minimal")) }}
+
+                    <div class="post-entry">
+
+                        {{ if .Params.summary }}
+                        <!-- Truncate the summary after 120 characters -->
+                        {{ .Params.summary  | safeHTML | truncate 120 }}
+
+                        {{ else }}
+                        {{ .Content }}
+                        {{ end }}
+                    </div>
+
+                    <div class="read-more-section">
+                        <h6><a href="{{ .Permalink }}" class="post-read-more">Read more</a> </h6>
+                    </div>
+
+                {{ end }}
+            </div>
+
+            <!-- Check if this post has a banner and display it -->
+            {{ if .Params.banner }}
+            <img src="{{ .Site.Params.bannerPath }}{{ .Params.banner }}" alt="{{ .Title }}" class="card-img-bottom align-self-end img-fluid " />
+            {{ end }}
+            <!-- If this post has a video display that instead -->
+            {{ if .Params.video }}
+            <video loop autoplay muted playsinline class="img-title">
+                <source src="{{ .Params.video }}">
+            </video>
+            {{ end }}
+                
+        </a>
+        </a>
+    </div>
+</div> 
