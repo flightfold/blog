@@ -1,4 +1,4 @@
-baseURL = "https://flightfold.github.io"
+baseURL = "https://flightfold.com"
 DefaultContentLanguage = "en"
 languageCode = "en-us"
 title = "FlightFold"
