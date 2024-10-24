@@ -982,3 +982,17 @@ body {
   }
 
   /* .blog-content { font-family: 'QuicksandMedium', Times, serif; } */
+
+  .cta {
+    text-align: center;
+    font-size:1.6em;
+    font-family: “GibsonSemibold”, “Helvetica Neue”, Helvetica, Arial, sans-serif;
+    text-shadow:0 1px 1px rgba(0,0,0,0.2);  
+  }
+  .cta button {
+    background-color:#a4d61e;
+    margin-top:6px;
+    margin-bottom:16px;
+    border-radius:4px;
+    padding:8px 20px;
+    }
