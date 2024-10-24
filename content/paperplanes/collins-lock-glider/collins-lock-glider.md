@@ -1,6 +1,6 @@
 ---
 title: 'Collins-Lock Glider'
-date: 2023-10-28T12:00:00-00:00
+date: 2024-10-22T12:00:00-00:00
 draft: false
 banner: "../paperplanes/collins-lock-glider/thumbnailc.webp"
 math: false
@@ -9,9 +9,11 @@ look: "minimal"
 categories: ['paperplanes']
 tags: ['glider','paperplanes','papercraft','diycrafts']
 folds: 23
-youtubeId: 16dw8yjgbMg
+youtubeId: q6bB_OSqScQ
 ---
+Welcome to FlightFold, where we transform simple sheets of paper into soaring marvels! Today, we’re folding the Collins Lock Glider—a plane so sleek and smooth, it could give a superhero a run for its money in the skies! With its unique design, this glider promises impressive flight and is sure to impress your friends at any gathering. So, grab your favorite paper, unleash your inner engineer, and let’s embark on this thrilling adventure of folding and flying!
 
+{{< subscribe >}}
 
 And here are the detailed, step-by-step instructions. Feel free to refer to the video when it gets harder to follow along. Click on the image thumbnail to see a higher resolution image. 
 
